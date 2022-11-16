@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221116 11:47:09.337" rpa="true" schemaversion="3">
+<suite id="s1" name="My-First-Robot" source="C:\Users\DebakantaMahanta\Documents\RoboCorp\my-first-robot">
+<suite id="s1-s1" name="Tasks" source="C:\Users\DebakantaMahanta\Documents\RoboCorp\my-first-robot\tasks.robot">
+<test id="s1-s1-t1" name="Order robots from RobotSpareBin Industries Inc" line="21">
+<kw name="Create a ZIP file of the receipts">
+<kw name="Set Variable" library="BuiltIn">
+<var>${zip_file_name}</var>
+<arg>${OUTPUT_DIR}${/}PDFs.zip</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221116 11:47:14.545" level="INFO">${zip_file_name} = C:\Users\DebakantaMahanta\Documents\RoboCorp\my-first-robot\results\PDFs.zip</msg>
+<status status="PASS" starttime="20221116 11:47:14.544" endtime="20221116 11:47:14.547"/>
+</kw>
+<kw name="Archive Folder With Zip" library="RPA.Archive">
+<arg>${OUTPUT DIR}${/}report</arg>
+<arg>${zip_file_name}</arg>
+<doc>Create a zip archive of a folder</doc>
+<msg timestamp="20221116 11:47:14.553" level="FAIL">ValueError: No files found to archive</msg>
+<status status="FAIL" starttime="20221116 11:47:14.547" endtime="20221116 11:47:14.557"/>
+</kw>
+<status status="FAIL" starttime="20221116 11:47:14.543" endtime="20221116 11:47:14.559"/>
+</kw>
+<kw name="Cleanup temporary PDF directory">
+<status status="NOT RUN" starttime="20221116 11:47:14.560" endtime="20221116 11:47:14.560"/>
+</kw>
+<status status="FAIL" starttime="20221116 11:47:14.540" endtime="20221116 11:47:14.561">ValueError: No files found to archive</status>
+</test>
+<doc>Orders robots from RobotSpareBin Industries Inc.
+Saves the order HTML receipt as a PDF file.
+Saves the screenshot of the ordered robot.
+Embeds the screenshot of the robot to the PDF receipt.
+Creates ZIP archive of the receipts and the images.</doc>
+<status status="FAIL" starttime="20221116 11:47:09.455" endtime="20221116 11:47:14.566"/>
+</suite>
+<status status="FAIL" starttime="20221116 11:47:09.346" endtime="20221116 11:47:14.575"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="My-First-Robot">My-First-Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tasks">My-First-Robot.Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
